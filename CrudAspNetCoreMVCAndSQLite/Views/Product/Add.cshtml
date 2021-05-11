@@ -1,0 +1,39 @@
+﻿@model CrudAspNetCoreMVCAndSQLite.Entities.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <h3>Add Product</h3>
+    <form method="post" asp-controller="product" asp-action="add">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" asp-for="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>
+                    <input type="number" min="0" asp-for="Price"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>
+                    <input type="number" min="0" asp-for="Quantity" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
